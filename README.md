@@ -1,5 +1,4 @@
 # Spring Boot Rest API User Authentication
-=========================
 
 ![Spring Boot 3.1.0](https://img.shields.io/badge/Spring%20Boot-2.0-brightgreen.svg)
 ![Mysql 8.2.4](https://img.shields.io/badge/Mysql-8.2.4-blue.svg)
