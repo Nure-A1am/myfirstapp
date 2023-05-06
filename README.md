@@ -40,37 +40,3 @@ Body:
     "password":"12345"
 }
 ```
-
-
-### API Usages
-
-|Method | Endpoint|
-| -------- | -------- |
-| `POST`     | api/v1/user/save |
-| `POST`     | api/v1/user/login|
-
-
-
-Register User using post request
-
-Body:
-
-```json
-{
-    "username":"Mr.YY",
-    "email":"yy@gmail.com",
-    "password":"12345"
-}
-```
-
-Login using post request
-
-Body:
-
-```json
-{
-    "username":"Mr.YY",
-    "email":"yy@gmail.com",
-    "password":"12345"
-}
-```
