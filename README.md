@@ -5,7 +5,7 @@
 ![JDK](https://img.shields.io/badge/JDK-19.0.2-brightgreen.svg)
 ![Maven](https://img.shields.io/badge/Maven-4.0.0-yellowgreen.svg)
 
-//![license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)
+ <!--- ![license](https://img.shields.io/badge/license-MPL--2.0-blue.svg) --->
 
 
 ### API Usages
