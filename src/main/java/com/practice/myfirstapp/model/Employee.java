@@ -26,8 +26,8 @@ public class Employee {
     private String emailId;
 
     @Column(name = "role")
-    private String EmployeeRole;
+    private String designation;
 
     @Column(name = "salary")
-    private String EmployeeSalary;
+    private String salary;
 }
