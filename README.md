@@ -13,13 +13,9 @@
 |Method | Endpoint| Usages |
 | -------- | -------- | -------- |
 | `POST`   | api/v1/employee/register | Register New Employee |
-| -------- | -------- | -------- |
 | `PUT`    | api/v1/employee/update/EMPLOYEE_ID_HERE | Update Existing Employee Info |
-| -------- | -------- | -------- |
 | `DELETE` | api/v1/employee/EMPLOYEE_ID_HERE | Delete Employee |
-| -------- | -------- | -------- |
 | `GET`    | api/v1/employee/EMPLOYEE_ID_HERE | Get Specific Employee Info |
-| -------- | -------- | -------- |
 | `GET`    | api/v1/employee/ | Get Specific All Info |
 
 
