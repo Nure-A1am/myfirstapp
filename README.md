@@ -11,16 +11,16 @@
 
 |Method | Endpoint| Usages |
 | -------- | -------- | -------- |
-| `POST`   | api/v1/employee/register | Register New Employee |
-| `PUT`    | api/v1/employee/update/EMPLOYEE_ID_HERE | Update Existing Employee Info |
-| `DELETE` | api/v1/employee/EMPLOYEE_ID_HERE | Delete Employee |
-| `GET`    | api/v1/employee/EMPLOYEE_ID_HERE | Get Specific Employee Info |
-| `GET`    | api/v1/employee/ | Get Specific All Info |
+| ![](https://img.shields.io/badge/-POST-blue.svg)  | `api/v1/employee/register` | Register New Employee |
+| ![](https://img.shields.io/badge/-PUT-9cf.svg)    | `api/v1/employee/update/EMPLOYEE_ID_HERE` | Update Existing Employee Info |
+| ![](https://img.shields.io/badge/-DELETE-red.svg) | `api/v1/employee/EMPLOYEE_ID_HERE` | Delete Employee |
+| ![](https://img.shields.io/badge/-GET-green)`     | `api/v1/employee/EMPLOYEE_ID_HERE` | Get Specific Employee Info |
+| ![](https://img.shields.io/badge/-GET-green)      | `api/v1/employee` | Get Specific All Info |
 
 
 
 
-Register User using `POST` request
+Register User using ![](https://img.shields.io/badge/-POST-blue.svg) request
 
 Json Body:
 
@@ -34,7 +34,7 @@ Json Body:
 }
 ```
 
-Update Employee using `PUT` request
+Update Employee using ![](https://img.shields.io/badge/-PUT-9cf.svg) request
 
 Json Body:
 
