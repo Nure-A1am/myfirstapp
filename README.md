@@ -11,11 +11,11 @@
 
 |Method | Endpoint| Usages |
 | -------- | -------- | -------- |
-| ![](https://img.shields.io/badge/-POST-blue.svg)  | `api/v1/employee/register` | Register New Employee |
-| ![](https://img.shields.io/badge/-PUT-9cf.svg)    | `api/v1/employee/update/EMPLOYEE_ID_HERE` | Update Existing Employee Info |
-| ![](https://img.shields.io/badge/-DELETE-red.svg) | `api/v1/employee/EMPLOYEE_ID_HERE` | Delete Employee |
-| ![](https://img.shields.io/badge/-GET-green)`     | `api/v1/employee/EMPLOYEE_ID_HERE` | Get Specific Employee Info |
-| ![](https://img.shields.io/badge/-GET-green)      | `api/v1/employee` | Get Specific All Info |
+| ![](https://img.shields.io/badge/-POST-blue.svg)   | `api/v1/employee/register` | Register New Employee |
+| ![](https://img.shields.io/badge/-PUT-9cf.svg)     | `api/v1/employee/update/EMPLOYEE_ID_HERE` | Update Existing Employee Info |
+| ![](https://img.shields.io/badge/-DELETE-red.svg)  | `api/v1/employee/EMPLOYEE_ID_HERE` | Delete Employee |
+| ![](https://img.shields.io/badge/-GET-brightgreen) | `api/v1/employee/EMPLOYEE_ID_HERE` | Get Specific Employee Info |
+| ![](https://img.shields.io/badge/-GET-brightgreen) | `api/v1/employee` | Get Specific All Info |
 
 
 
