@@ -8,12 +8,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/api/v1/employee")
 public class EmployeeController {
 
     @Autowired
@@ -25,7 +26,7 @@ public class EmployeeController {
     }
 
     // build create employee REST API
-    @PostMapping
+    @PostMapping("/register")
     public Employee createEmployee(@RequestBody Employee employee){
         return employeeRepository.save(employee);
     }
@@ -39,7 +40,7 @@ public class EmployeeController {
     }
 
     // build update employee REST API
-    @PutMapping("{id}")
+    @PutMapping("update/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable long id,@RequestBody Employee employeeDetails) {
         Employee updateEmployee = employeeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
