@@ -12,7 +12,7 @@
 
 |Method | Endpoint|
 | -------- | -------- |
-| `POST`     | api/v1/user/save |
+| `POST`     | api/v1/user/register |
 | `POST`     | api/v1/user/login|
 
 
