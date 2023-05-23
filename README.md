@@ -10,33 +10,42 @@
 
 ### API Usages
 
-|Method | Endpoint|
-| -------- | -------- |
-| `POST`     | api/v1/user/register |
-| `POST`     | api/v1/user/login|
+|Method | Endpoint| Usages |
+| -------- | -------- | -------- |
+
+| `POST`    | api/v1/employee/register | Register New Employee |
+| `PUT`     | api/v1/employee/update/EMPLOYEE_ID_HERE | Update Existing Employee Info |
+| `DELETE`  | api/v1/employee/EMPLOYEE_ID_HERE | Delete Employee |
+| `GET`     | api/v1/employee/EMPLOYEE_ID_HERE | Get Specific Employee Info |
+| `GET`     | api/v1/employee/ | Get Specific All Info |
 
 
 
-Register User using post request
 
-Body:
+Register User using `POST` request
+
+Json Body:
 
 ```json
 {
-    "username":"Mr.YY",
-    "email":"yy@gmail.com",
-    "password":"12345"
+        "firstName": "Mr.",
+        "lastName": "Bean",
+        "emailId": "mrbean@gmail.com",
+        "designation": "HR Head",
+        "salary": "1200000"
 }
 ```
 
-Login using post request
+Update Employee using `PUT` request
 
-Body:
+Json Body:
 
 ```json
 {
-    "username":"Mr.YY",
-    "email":"yy@gmail.com",
-    "password":"12345"
+        "firstName": "Mr.",
+        "lastName": "Bean",
+        "emailId": "mrbean@gmail.com",
+        "designation": "CEO",
+        "salary": "1200000"
 }
 ```
