@@ -13,7 +13,7 @@ Just connect with your MySql server. You don't need to create any database or ta
 
 #### application.properties
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME?useSSL=false
+spring.datasource.url=jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME?createDatabaseIfNotExist=true
 spring.datasource.username=YOUR_MYSQL_DATABASE_USERNAME
 spring.datasource.password=YOUR_MYSQL_DATABASE_PASSWORD
 
