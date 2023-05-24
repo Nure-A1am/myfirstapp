@@ -30,7 +30,7 @@ Json Body:
         "lastName": "Bean",
         "emailId": "mrbean@gmail.com",
         "designation": "HR Head",
-        "salary": "1200000"
+        "salary": "30000"
 }
 ```
 
