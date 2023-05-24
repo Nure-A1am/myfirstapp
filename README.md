@@ -1,4 +1,4 @@
-# Simple Spring Boot Rest API Employee Managment
+# Spring Boot Simple Rest API Employee Managment Backend Application
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.0-brightgreen.svg)
 ![Mysql](https://img.shields.io/badge/Mysql-8.2.4-blue.svg)
 ![JDK](https://img.shields.io/badge/Java-17-brightgreen.svg)
@@ -20,7 +20,7 @@
 
 
 
-Register User using ![](https://img.shields.io/badge/-POST-blue.svg) request
+Register Employee using ![](https://img.shields.io/badge/-POST-blue.svg) request
 
 Json Body:
 
@@ -30,7 +30,7 @@ Json Body:
         "lastName": "Bean",
         "emailId": "mrbean@gmail.com",
         "designation": "HR Head",
-        "salary": "1200000"
+        "salary": "30000"
 }
 ```
 
