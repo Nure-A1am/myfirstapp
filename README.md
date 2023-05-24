@@ -9,7 +9,7 @@
  
 ### Project Usages
 
-Just connect with your MySql server. You don't need to create any database or table those will be automatically create when you run this Application.
+Just connect with your MySql server. You don't need to create any database or table, database and tables will be automatically created when you run this Application.
 
 #### application.properties
 ```
