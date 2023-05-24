@@ -4,18 +4,16 @@ package com.practice.myfirstapp.controller;
 import com.practice.myfirstapp.exception.ResourceNotFoundException;
 import com.practice.myfirstapp.model.Employee;
 import com.practice.myfirstapp.repository.EmployeeRepository;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/employee")
-public class EmployeeController {
+public class EmployeeRestApiController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
@@ -67,5 +65,6 @@ public class EmployeeController {
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
 
 }
