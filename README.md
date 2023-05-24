@@ -20,7 +20,7 @@
 
 
 
-Register User using ![](https://img.shields.io/badge/-POST-blue.svg) request
+Register Employee using ![](https://img.shields.io/badge/-POST-blue.svg) request
 
 Json Body:
 
