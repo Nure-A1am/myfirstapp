@@ -23,6 +23,14 @@ spring.jpa.hibernate.ddl-auto = update
 ```
 
 
+### Web Page Address
+
+| Link | Usages |
+| -------- | -------- |
+| `http://localhost:8080/employee/new` | Register New Employee |
+| `http://localhost:8080/` | List Of All Employee |
+
+
 ### API Usages
 
 |Method | Endpoint| Usages |
