@@ -45,31 +45,31 @@ spring.jpa.hibernate.ddl-auto = update
 
 #### Index / Welcome Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s1.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/fcb017328436dd41ff93e70f34ec846f4d5bf2db/src/main/resources/screenshots/ss1.PNG"
     alt="Index Page" />
 </p>
 
 #### Login Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s2.png"
+  <img src="+https://github.com/Nure-A1am/myfirstapp/blob/fcb017328436dd41ff93e70f34ec846f4d5bf2db/src/main/resources/screenshots/s2.png"
     alt="Login Page" />
 </p>
 
 #### Employee List Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s3.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/fcb017328436dd41ff93e70f34ec846f4d5bf2db/src/main/resources/screenshots/s3.png"
     alt="Employee List Page" />
 </p>
 
 #### Employee Info Update Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s4.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/fcb017328436dd41ff93e70f34ec846f4d5bf2db/src/main/resources/screenshots/s4.png"
     alt="Employee Info Update Page" />
 </p>
 
 #### Access Denided Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s5.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/fcb017328436dd41ff93e70f34ec846f4d5bf2db/src/main/resources/screenshots/s5.png"
     alt="Access Denided Page" />
 </p>
 
