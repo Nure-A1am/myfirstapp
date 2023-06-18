@@ -45,31 +45,31 @@ spring.jpa.hibernate.ddl-auto = update
 
 #### Index / Welcome Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s1.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/main/src/main/resources/screenshots/ss1.PNG"
     alt="Index Page" />
 </p>
 
 #### Login Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s2.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/main/src/main/resources/screenshots/ss2.PNG"
     alt="Login Page" />
 </p>
 
 #### Employee List Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s3.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/main/src/main/resources/screenshots/ss3.PNG"
     alt="Employee List Page" />
 </p>
 
 #### Employee Info Update Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s4.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/main/src/main/resources/screenshots/ss4.PNG"
     alt="Employee Info Update Page" />
 </p>
 
 #### Access Denided Page
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s5.png"
+  <img src="https://github.com/Nure-A1am/myfirstapp/blob/main/src/main/resources/screenshots/ss5.PNG"
     alt="Access Denided Page" />
 </p>
 
