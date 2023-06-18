@@ -2,29 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Employee Management System</title>
+    <title>Add New Employee || Employee Management System</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">Employee Management System</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Employee Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/}">Employee Management</a>
-            </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:href = "@{/}">Home</a>
+            <a class="nav-item nav-link" th:href = "@{/employee/list}">Employee List</a>
+            <a class="nav-item nav-link active" th:href = "@{/employee/new}">Add Employee<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" th:href = "@{/logout}">Logout!</a>
+        </div>
     </div>
 </nav>
 <br>
@@ -34,7 +30,7 @@
         <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
             <h1 class = "text-center"> Create New Employee </h1>
             <div class = "card-body">
-                <form action="#" th:action="@{/addemp}" th:object="${employee}" method="POST">
+                <form action="#" th:action="@{/process/employee/add}" th:object="${employee}" method="POST">
                     <div class ="form-group">
                         <label>First Name </label>
                         <input
@@ -72,15 +68,34 @@
                     </div>
 
                     <div class ="form-group">
-                        <label> Designation </label>
+                        <label>Password </label>
                         <input
-                                type = "text"
-                                name = "role"
-                                th:field = "*{designation}"
+                                type = "password"
+                                name = "password"
+                                th:field = "*{password}"
                                 class = "form-control"
-                                placeholder="Enter Employee Designation"
+                                placeholder="Enter New Password For This Employee"
                         />
-                        <span class="text-danger" th:if="${#fields.hasErrors('designation')}" th:errors="*{designation}"></span>
+                        <span class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    </div>
+
+                    <div class ="form-group">
+                        <label> Employee Designation </label>
+
+                        <div class="input-group mb-3">
+                            <select class="custom-select" th:field = "*{role}" >
+                                <option value="sales_executive" >Marketing & Sales Executive</option>
+                                <option value="customer_support" >Customer Service Representative</option>
+                                <option value="it_support" >IT Support Specialist</option>
+                                <option value="sales_manager" >Sales Manager</option>
+                                <option value="hr_talent_acquisition" >HR Talent Acquisition</option>
+                                <option value="hr_manager" >HR Manager</option>
+                                <!--                            <option th:value="hr_manager2" th:text="HR Manager 2"></option>-->
+                                <!--                            <option th:each="option : ${options}" th:value="${option}" th:text="${option}"></option>-->
+                            </select>
+                        </div>
+
+                        <span class="text-danger" th:if="${#fields.hasErrors('role')}" th:errors="*{role}"></span>
                     </div>
 
                     <div class ="form-group">
@@ -106,5 +121,7 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

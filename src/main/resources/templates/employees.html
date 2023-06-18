@@ -2,29 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="ISO-8859-1">
-    <title>Employee Management System</title>
+    <title> All Employee List || Employee Management System</title>
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">Employee Management System</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Employee Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/}">Employee Management</a>
-            </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:href = "@{/}">Home</a>
+            <a class="nav-item nav-link active" th:href = "@{/employee/list}">Employee List</a>
+            <a class="nav-item nav-link" th:href = "@{/employee/new}">Add Employee</a>
+            <a class="nav-item nav-link active" th:href = "@{/logout}">Logout!</a>
+        </div>
     </div>
 </nav>
 
@@ -35,7 +31,7 @@
 
     <div class = "row">
         <div class = "col-lg-3">
-            <a th:href = "@{employee/new}" class = "btn btn-primary btn-sm mb-3"> Add Employee</a>
+            <a th:href = "@{/employee/new}" class = "btn btn-primary btn-sm mb-3"> Add Employee</a>
         </div>
     </div>
 
@@ -58,20 +54,22 @@
             <td th:text = "${employee.firstName}"></td>
             <td th:text = "${employee.lastName}"></td>
             <td th:text = "${employee.emailId}"></td>
-            <td th:text = "${employee.designation}"></td>
+            <td th:text = "${employee.role}"></td>
             <td th:text = "${employee.salary}"></td>
             <td>
                 <a th:href = "@{/employee/edit/{id}(id=${employee.id})}"
                    class = "btn btn-primary">Update</a>
 
-                <a th:href = "@{/employee/delete/{id}(id=${employee.id})}"
+                <a th:href = "@{/process/employee/delete/{id}(id=${employee.id})}"
                    class = "btn btn-danger">Delete</a>
 
             </td>
         </tr>
         </tbody>
     </table>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 </div>
 </body>
 </html>

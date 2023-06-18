@@ -4,13 +4,14 @@ import com.practice.myfirstapp.model.Employee;
 import com.practice.myfirstapp.repository.EmployeeRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import static com.practice.myfirstapp.configuration.AppConfigConstants.*;
 
 
 @Controller
@@ -19,58 +20,80 @@ public class EmployeeFrontendController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-//    @RequestMapping("/new")
-//    public ModelAndView showRegisterForm() {
-//        ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("create_new_employee");
-//        return modelAndView;
-//    }
-    @GetMapping("employee/new")
-    public String showRegisterForm(Employee employee) {
+     public PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public void EmployeeRepository(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    @GetMapping(ADD_EMPLOYEE_FORM_URL)
+    public String showAddEmployeeForm(Employee employee) {
         return "create_new_employee";
     }
 
-    @PostMapping("/addemp")
+    @GetMapping(WELCOME_PAGE_URL)
+    public String showWecomePage() {
+        return "welcome";
+    }
+
+    @GetMapping(ACCESS_DENIED_PAGE_URL)
+    public String showAccessDeniedPage() {
+        return "accessDeniedPage";
+    }
+
+
+    @PostMapping(ADD_EMPLOYEE_PROCESS_URL)
     public String addEmp(@Valid Employee employee, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "create_new_employee";
         }
+        String rawPassword = employee.getPassword();
+        // Encode the password using the PasswordEncoder
+        String encodedPassword = passwordEncoder.encode(rawPassword);
+        employee.setPassword(encodedPassword);
         employeeRepository.save(employee);
-        return "redirect:/";
+        return "redirect:/employee/list";
     }
 
-    @RequestMapping("/")
-    public String showEmployeeList(Model model) {
+    @RequestMapping(EMPLOYEE_LIST_URL)
+    public String showEmployeeList(Model model, RedirectAttributes redirectAttributes) {
+        model.addAttribute("successMessage", redirectAttributes.getAttribute("successMessage"));
         model.addAttribute("employees", employeeRepository.findAll());
         return "employees";
     }
 
-    @GetMapping("employee/edit/{id}")
-    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+
+    @GetMapping(UPDATE_EMPLOYEE_FORM_URL)
+    public String showUpdateForm(@PathVariable("id") long id, Model model, RedirectAttributes redirectAttributes) {
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid employee Id:" + id));
         model.addAttribute("employee", employee);
         return "edit_employee";
     }
 
-    @PostMapping("employee/update/{id}")
+    @PostMapping(UPDATE_EMPLOYEE_PROCESS_URL)
     public String updateEmployee(@PathVariable("id") long id, @Valid Employee employee,
-                             BindingResult result, Model model) {
+                                 BindingResult result, Model model, RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             employee.setId(id);
-            System.out.println(result.hasErrors());
+            System.out.println("Update Error: " + result.hasErrors());
             return "edit_employee";
         }
-
+        String rawPassword = employee.getPassword();
+        // Encode the password using the PasswordEncoder
+        String encodedPassword = passwordEncoder.encode(rawPassword);
+        employee.setPassword(encodedPassword);
         employeeRepository.save(employee);
-        return "redirect:/";
+        redirectAttributes.addFlashAttribute("successMessage", "Employee updated successfully");
+        return "redirect:/employee/list";
     }
 
-    @GetMapping("employee/delete/{id}")
+    @GetMapping(DELETE_EMPLOYEE_PROCESS_URL)
     public String deleteUser(@PathVariable("id") long id, Model model) {
         Employee employee = employeeRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         employeeRepository.delete(employee);
-        return "redirect:/";
+        return "redirect:/employee/list";
     }
 }

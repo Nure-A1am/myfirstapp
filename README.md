@@ -1,4 +1,4 @@
-# Spring Boot Simple Rest API Employee Managment Application
+# Employee Managment System With Role Based Authentication
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.0-brightgreen.svg)
 ![Mysql](https://img.shields.io/badge/Mysql-8.2.4-blue.svg)
 ![JDK](https://img.shields.io/badge/Java-17-brightgreen.svg)
@@ -25,49 +25,121 @@ spring.jpa.hibernate.ddl-auto = update
 
 ### Web Page Address
 
-| Link | Usages |
-| -------- | -------- |
-| `http://localhost:8080/employee/new` | Register New Employee |
-| `http://localhost:8080/` | List Of All Employee |
+| Link                                                   | Usages                |
+|--------------------------------------------------------|-----------------------|
+| `http://localhost:8080/employee/new`                   | Register New Employee |
+| `http://localhost:8080/employee/list`                  | List Of All Employee  |
+| `http://localhost:8080/employee/edit/EMPLOYEE_ID_HERE` | Update Employee Info  |
+| `http://localhost:8080/login`                          | Login Page            |
 
 
-### API Usages
+### Default Users Info
 
-|Method | Endpoint| Usages |
-| -------- | -------- | -------- |
-| ![](https://img.shields.io/badge/-POST-blue.svg)   | `api/v1/employee/register` | Register New Employee |
-| ![](https://img.shields.io/badge/-PUT-9cf.svg)     | `api/v1/employee/update/EMPLOYEE_ID_HERE` | Update Existing Employee Info |
-| ![](https://img.shields.io/badge/-DELETE-red.svg)  | `api/v1/employee/EMPLOYEE_ID_HERE` | Delete Employee |
-| ![](https://img.shields.io/badge/-GET-brightgreen) | `api/v1/employee/EMPLOYEE_ID_HERE` | Get Specific Employee Info |
-| ![](https://img.shields.io/badge/-GET-brightgreen) | `api/v1/employee` | Get All Employee Info |
+| Username        | Password | Role            | Privilege           |
+|-----------------|----------|-----------------|---------------------|
+| sales@email.com | pw789    | sales_executive | No Privilege        |
+| it@email.com    | pw456    | it_support      | Add, Update, Delete |
+| hr@email.com    | pw123    | hr_manager      | Add, Update, Delete |
+
+### Screenshots:
+
+#### Index / Welcome Page
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s1.png"
+    alt="Index Page" />
+</p>
+
+#### Login Page
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s2.png"
+    alt="Login Page" />
+</p>
+
+#### Employee List Page
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s3.png"
+    alt="Employee List Page" />
+</p>
+
+#### Employee Info Update Page
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s4.png"
+    alt="Employee Info Update Page" />
+</p>
+
+#### Access Denided Page
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nure-A1am/myfirstapp/main/src/main/resources/templates/s5.png"
+    alt="Access Denided Page" />
+</p>
 
 
+[//]: # (### API Usages)
 
+[//]: # ()
+[//]: # (|Method | Endpoint| Usages |)
 
-Register Employee using ![](https://img.shields.io/badge/-POST-blue.svg) request
+[//]: # (| -------- | -------- | -------- |)
 
-Json Body:
+[//]: # (| ![]&#40;https://img.shields.io/badge/-POST-blue.svg&#41;   | `api/v1/employee/register` | Register New Employee |)
 
-```json
-{
-        "firstName": "Mr.",
-        "lastName": "Bean",
-        "emailId": "mrbean@gmail.com",
-        "designation": "HR Head",
-        "salary": "30000"
-}
-```
+[//]: # (| ![]&#40;https://img.shields.io/badge/-PUT-9cf.svg&#41;     | `api/v1/employee/update/EMPLOYEE_ID_HERE` | Update Existing Employee Info |)
 
-Update Employee using ![](https://img.shields.io/badge/-PUT-9cf.svg) request
+[//]: # (| ![]&#40;https://img.shields.io/badge/-DELETE-red.svg&#41;  | `api/v1/employee/EMPLOYEE_ID_HERE` | Delete Employee |)
 
-Json Body:
+[//]: # (| ![]&#40;https://img.shields.io/badge/-GET-brightgreen&#41; | `api/v1/employee/EMPLOYEE_ID_HERE` | Get Specific Employee Info |)
 
-```json
-{
-        "firstName": "Mr.",
-        "lastName": "Bean",
-        "emailId": "mrbean@gmail.com",
-        "designation": "CEO",
-        "salary": "1200000"
-}
-```
+[//]: # (| ![]&#40;https://img.shields.io/badge/-GET-brightgreen&#41; | `api/v1/employee` | Get All Employee Info |)
+
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # ()
+[//]: # (Register Employee using ![]&#40;https://img.shields.io/badge/-POST-blue.svg&#41; request)
+
+[//]: # ()
+[//]: # (Json Body:)
+
+[//]: # ()
+[//]: # (```json)
+
+[//]: # ({)
+
+[//]: # (        "firstName": "Mr.",)
+
+[//]: # (        "lastName": "Bean",)
+
+[//]: # (        "emailId": "mrbean@gmail.com",)
+
+[//]: # (        "designation": "HR Head",)
+
+[//]: # (        "salary": "30000")
+
+[//]: # (})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (Update Employee using ![]&#40;https://img.shields.io/badge/-PUT-9cf.svg&#41; request)
+
+[//]: # ()
+[//]: # (Json Body:)
+
+[//]: # ()
+[//]: # (```json)
+
+[//]: # ({)
+
+[//]: # (        "firstName": "Mr.",)
+
+[//]: # (        "lastName": "Bean",)
+
+[//]: # (        "emailId": "mrbean@gmail.com",)
+
+[//]: # (        "designation": "CEO",)
+
+[//]: # (        "salary": "1200000")
+
+[//]: # (})
+
+[//]: # (```)
